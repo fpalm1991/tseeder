@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    font-size: clamp(1rem, 0.7449rem + 0.8163vw, 1.5rem);
+    line-height: 1.8;
+    background-color: lightgreen;
+}
+
+.container {
+    padding: 1rem;
+}

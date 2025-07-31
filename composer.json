@@ -1,0 +1,15 @@
+{
+    "name": "tseeder/tseeder",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tseeder\\Tseeder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Feliu"
+        }
+    ],
+    "require": {}
+}
