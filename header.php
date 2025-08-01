@@ -7,10 +7,23 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
-	<header>
-		<div class="container">Header</div>
+	<header class="header">
+		<div class="container">
+
+			<?php
+
+			wp_nav_menu(
+				[
+					'theme_location' => 'primary_menu',
+					'container' => 'nav',
+				]
+			);
+
+			?>
+
+		</div>
 	</header>
 
-	<main>
+	<main class="main">
