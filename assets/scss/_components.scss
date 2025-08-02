@@ -1,0 +1,8 @@
+.swiper {
+    height: 300px;
+
+    .swiper-slide {
+        display: grid;
+        place-content: center;
+    }
+}
