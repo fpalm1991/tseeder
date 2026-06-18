@@ -10,6 +10,7 @@
   "devDependencies": {
     "autoprefixer": "^10.5.0",
     "css-loader": "^7.1.4",
+    "css-minimizer-webpack-plugin": "^8.0.0",
     "mini-css-extract-plugin": "^2.10.2",
     "postcss": "^8.5.15",
     "postcss-loader": "^8.2.1",
