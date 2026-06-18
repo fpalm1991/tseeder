@@ -26,10 +26,10 @@ class Tseeder
         throw new Exception("Cannot unserialize singleton");
     }
 
-    public static function getInstance(): static
+    public static function getInstance(): Tseeder
     {
         if (self::$instance === null) {
-            self::$instance = new static();
+            self::$instance = new Tseeder();
         }
 
         return self::$instance;
