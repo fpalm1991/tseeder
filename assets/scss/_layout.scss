@@ -2,34 +2,29 @@
 
 body {
     min-height: 100vh;
-    font-family: variables.$font-body;
-    font-size: clamp(1rem, 0.7449rem + 0.8163vw, 1.5rem);
-    line-height: 1.8;
-    color: variables.$color-text;
     background-color: variables.$color-bg;
 }
 
 .header {
-    nav {
-        .menu {
-            display: flex;
-            justify-content: space-evenly;
-            list-style: none;
-
-            .menu-item {
-                a {
-                    text-decoration: none;
-                    color: inherit;
-                }
-            }
-        }
+    .logo {
+        z-index: 20;
     }
 }
 
 .container {
     padding: 2rem;
+    max-width: variables.$layout-max-width;
+    margin-inline: auto;
 }
 
 .section {
-    padding: 3rem 2rem;
+    padding-block: 2rem;
+
+    @media (min-width: variables.$breakpoint-md) {
+        padding-block: 4rem;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+        padding-block: 6rem;
+    }
 }

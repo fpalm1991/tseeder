@@ -1,3 +1,24 @@
-$font-body: Helvetica, sans-serif;
+/* === Layout === */
+$layout-max-width: 1440px;
+
+/* === Font === */
+$ff-body: Helvetica, sans-serif;
+$fs-body: clamp(1rem, 0.9583rem + 0.1852vw, 1.125rem);
+$fs-small: clamp(0.875rem, 0.8333rem + 0.1852vw, 1rem);
+
+/* === Colors === */
 $color-text: #2a2a2a;
 $color-bg: #fafafa;
+$color-accent: #050561;
+
+/* === Breakpoints */
+$breakpoint-sm: 576px;
+$breakpoint-sm-max: 575px;
+$breakpoint-md: 768px;
+$breakpoint-md-max: 767px;
+$breakpoint-lg: 1024px;
+$breakpoint-lg-max: 1023px;
+$breakpoint-xl: 1280px;
+$breakpoint-xl-max: 1279px;
+$breakpoint-ultra: 1536px;
+$breakpoint-ultra-max: 1535px;

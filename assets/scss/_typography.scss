@@ -1,0 +1,8 @@
+@use "variables";
+
+body {
+    font-family: variables.$ff-body;
+    font-size: clamp(1rem, 0.7449rem + 0.8163vw, 1.5rem);
+    line-height: 1.6;
+    color: variables.$color-text;
+}

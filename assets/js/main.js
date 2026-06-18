@@ -1,8 +1,8 @@
-import { Application } from "@hotwired/stimulus";
-import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
+import {Application} from "@hotwired/stimulus";
+import {definitionsFromContext} from "@hotwired/stimulus-webpack-helpers";
 import "../scss/main.scss";
 import Swiper from "swiper";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -30,6 +30,22 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-scrollbar",
         draggable: true,
     },
+});
+
+// Primary navigation
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleMobileNavButton = document.getElementById("toggle-mobile-nav");
+    const body = document.querySelector("body");
+
+    if (!toggleMobileNavButton || !body) return;
+
+    toggleMobileNavButton.addEventListener("click", () => {
+        const isOpen = body.classList.toggle("primary-nav-open");
+
+        toggleMobileNavButton.classList.toggle("open", isOpen);
+        toggleMobileNavButton.setAttribute("aria-expanded", isOpen);
+        toggleMobileNavButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    });
 });
 
 console.log("Hello, world!");
