@@ -6,13 +6,17 @@ import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const isProd = process.env.NODE_ENV === "production";
+
 export default {
     entry: "./assets/js/main.js",
-    plugins: [new MiniCssExtractPlugin()],
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "./assets/dist"),
+        clean: true,
     },
+    devtool: isProd ? false : "source-map",
+    plugins: [new MiniCssExtractPlugin()],
     module: {
         rules: [
             {
@@ -43,10 +47,11 @@ export default {
         ],
     },
     optimization: {
+        minimize: isProd,
         minimizer: [
             `...`,
             new CssMinimizerPlugin(),
         ],
     },
-    mode: "production",
+    mode: isProd ? "production" : "development",
 };
