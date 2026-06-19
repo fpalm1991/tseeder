@@ -23,8 +23,6 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "swiper": "^12.2.0"
   }
 }
